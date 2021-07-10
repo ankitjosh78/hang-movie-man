@@ -41,7 +41,7 @@ while counter > 0:
                         flag=1
 
                     except sqlite3.ProgrammingError as e:
-                        print(e)
+                        pass
                     
                 if flag == 1:
                     counter-=1 
