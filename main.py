@@ -25,8 +25,14 @@ if userChoice == 2:
         print(count,":",genre)
         count+=1
 
-    genreChoice=int(input("Enter your choice:"))
-
+    try:
+        genreChoice=int(input("Enter your choice:"))
+        if genreChoice > count or genreChoice < 1:
+            print("Please enter a proper number from the given list and try again")
+            quit()
+    except ValueError as _:
+        print("Please enter a number from the given list and try again.")
+        quit()
     genreMap={}
     count=1
     for genre in newGen:
