@@ -14,9 +14,6 @@ db=sqlite3.connect("movieman.db")
 
 mc=db.cursor()
 
-#mc.execute(""" create table movies (movieID integer, movieName text, genre text, movieSummary text) """)
-#db.commit()
-
 try:
     movie=movieman.get_movie(sequence)
     try:
