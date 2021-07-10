@@ -29,8 +29,7 @@ If there is none, then it will added as a new entry to the database.
 
 ## "Hey, the fillingData.py file adds only one movie at a time, is there a way to continuously add movies to the database?"
 
-Yes, just run the "script.sh" file if you are using Linux or macOS.
+Yes, just run the "script.sh" file if you are using Linux or macOS. (If you are still using windows, i dont know what to say 🙂 )
 
 It will keep adding movies unless you close the script using "Ctrl-C".
 
-(If you are still using windows, i dont know what to say 🙂 )
