@@ -16,7 +16,9 @@ At the time it has around 500 entries , but new entries can be easily added.
 
 ## How to add more movies to the database ?
 
-To add a new movie just run "python fillingData.py" ,
+To add a new movie just run "python fillingData.py".
+
+(NOTE: You will need to download the "imdbpy" python module.)
 
 ## How does the fillingData.py file works?
 This will generate a random sequence and check if a IMDb movie exists with that id in IMDB. 
