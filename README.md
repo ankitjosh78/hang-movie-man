@@ -21,11 +21,13 @@ To add new movies just run "python fillingData.py" and give the number of movies
 (NOTE: You will need to download the "imdbpy" python module.)
 
 ## How does the fillingData.py file works?
-This will generate a random sequence and check if a IMDb movie exists with that id in IMDB. 
+It asks you for the number of new entries to be added and then for that many no of time,
+
+It will generate a random sequence and check if a IMDb movie exists with that id in IMDB. 
 
 If found, it will check if there already exists a record for it.
 
-If there is none, then it will added as a new entry to the database.
+If there is none, then it will added as a new entry to the database and the counter wil be increased.
 
 ## Example video showing how to use:
 
