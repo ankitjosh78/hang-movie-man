@@ -21,8 +21,6 @@ To add a new movie just run "python newDataModel.py" ,
 ## How does the newDataModel.py file works?
 This will generate a random sequence and check if a IMDb movie exists with that id from the IMDb api. 
 
-It might give some error sometimes(very rare) if there exists no movies for that id.
-
 If found, it will check if there already exists a record for it.
 
 If there is none, then it will added as a new entry to the database.
