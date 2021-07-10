@@ -5,7 +5,7 @@ Hangman but for movies 😉
 This is a fun hangman style game to guess random movie names from the local database and show some summary about the movie with a link to the same.
 
 # How to use?
-Clone the repo, and run "python newMain.py".
+Clone the repo, and run "python main.py".
 
 # FAQ:
 
@@ -16,7 +16,7 @@ At the time it has around 500 entries , but new entries can be easily added.
 
 ## How to add more movies to the database ?
 
-To add a new movie just run "python newDataModel.py" ,
+To add a new movie just run "python fillingData.py" ,
 
 ## How does the newDataModel.py file works?
 This will generate a random sequence and check if a IMDb movie exists with that id from the IMDb api. 
@@ -25,7 +25,7 @@ If found, it will check if there already exists a record for it.
 
 If there is none, then it will added as a new entry to the database.
 
-## "Hey, the newDataModel.py file adds only one movie at a time, is there a way to continuously add movies to the database?"
+## "Hey, the fillingData.py file adds only one movie at a time, is there a way to continuously add movies to the database?"
 
 Yes, just run the "script.sh" file if you are using Linux or macOS.
 
