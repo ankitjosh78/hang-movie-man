@@ -47,13 +47,15 @@ if userChoice == 2:
     for x in mc.fetchall():
         movieIDs.append(x[0])
 
-else:
-
+elif userChoice == 1:
     mc.execute("select distinct movieID from movies order by movieID asc")
     movieIDs=[]
     for x in mc.fetchall():
         movieIDs.append(x[0])
 
+else:
+    print("Please select correct option and try again")
+    quit()
 movieID=choice(movieIDs)
 
 mc.execute("select movieName from movies where movieID=?",(movieID,))
