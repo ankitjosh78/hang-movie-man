@@ -15,7 +15,12 @@ for x in genres:
 
 print("1. Completely random movie.")
 print("2. Movie from specific genres like (Action, Fantasy)")
-userChoice=int(input("How do you want to guess the movie?"))
+try:
+    userChoice=int(input("How do you want to guess the movie?"))
+
+except ValueError as _:
+    print("Please enter a correct number and try again.")
+    quit()
 
 if userChoice == 2:
 
