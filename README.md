@@ -33,3 +33,10 @@ Yes, just run the "script.sh" file if you are using Linux or macOS. (If you are 
 
 It will keep adding movies unless you close the script using "Ctrl-C".
 
+
+## Example video showing how to use:
+
+https://user-images.githubusercontent.com/62146611/125160215-63783400-e199-11eb-9ae2-a33c768f6ee1.mp4
+
+
+
