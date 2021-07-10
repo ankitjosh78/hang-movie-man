@@ -18,7 +18,7 @@ At the time it has around 500 entries , but new entries can be easily added.
 
 To add a new movie just run "python fillingData.py" ,
 
-## How does the newDataModel.py file works?
+## How does the fillingData.py file works?
 This will generate a random sequence and check if a IMDb movie exists with that id from the IMDb api. 
 
 If found, it will check if there already exists a record for it.
