@@ -4,7 +4,7 @@ from random import choice
 import sqlite3
 from string import digits
 
-counter=int(input("Enter how many new entries you want?(e.g 10)"))
+counter=int(input("Enter how many new movies you want?(e.g 10)"))
 count=0
 
 movieman=IMDb()
@@ -28,6 +28,7 @@ while counter > 0:
             answer=mc.fetchall()
 
             if answer[0][0] == 0:
+                flag=0
                 movieName=str(movie)
                 movieSummary=str(movie.summary())
 
@@ -37,17 +38,20 @@ while counter > 0:
                     try:
                         mc.execute(sqlQuery,(movieID,movieName,genre,movieSummary))
                         db.commit()
-                        counter-=1
-                        count+=1
-                        print(count,"new entries added to the database.")
+                        flag=1
 
                     except sqlite3.ProgrammingError as e:
                         print(e)
                     
+                if flag == 1:
+                    counter-=1 
+                    count+=1
+                    print(count,"new movies added to the database.")
 
         except KeyError as _:
             pass
-
+        except IMDbDataAccessError as _:
+            pass
     except IMDbDataAccessError as e:
         pass
 # Closing the connection when done
