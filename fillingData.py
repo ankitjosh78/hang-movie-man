@@ -36,4 +36,4 @@ try:
     except KeyError as _:
         pass
 except IMDbDataAccessError as e:
-    print("No official movie from IMDb found for the current random sequence.")
+    print("Sorry no official movie from IMDb found for the current random sequence.")
