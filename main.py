@@ -63,9 +63,9 @@ for x in mc.fetchall():
 db.close()
 
 actualMovie=movieName
-movieName=movieName.lower()
-movieName.replace("'","")
+
 # Movie name in string and it's length
+movieName=movieName.lower()
 movieLen=len(movieName) 
 
 # Movie Link
