@@ -101,6 +101,7 @@ else:
             if hashMap[x]==False:
                 flag=1
         if flag==0:
+            print()
             print("Congratulations, you have succesfully guessed the movie:",actualMovie)
             break
 
