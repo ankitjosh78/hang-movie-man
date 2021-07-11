@@ -98,7 +98,8 @@ elif userChoice  ==  3:
     for language in newLang:
         print(count,":",language)
         count += 1
-
+    print()
+    print("(NOTE: You can scroll up or down to see more languages.)")
     try:
 
         # storing user's language choice
