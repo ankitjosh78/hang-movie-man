@@ -175,8 +175,9 @@ movieName = movieName.lower()
 movieLen = len(movieName) 
 
 # Movie Link
-movieLink = "https://www.imdb.com/title/tt00"
-movieLink += str(movieID)
+movieLink = "https://www.imdb.com/title/tt"
+
+movieLink = movieLink + "0"*(7-len(str(movieID))) + str(movieID)
 
 """ Implementation of the actual game starts from here """
 
