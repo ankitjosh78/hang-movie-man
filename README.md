@@ -29,9 +29,13 @@ If found, it will check if there already exists a record for it.
 
 If there is none, then it will added as a new entry to the database and the counter will be increased.
 
-## Example video showing how to use:
+## Example video showing how to play the game:
+https://user-images.githubusercontent.com/62146611/125195082-ba513c80-e271-11eb-9c2c-3c223f0c524e.mp4
 
-https://user-images.githubusercontent.com/62146611/125160215-63783400-e199-11eb-9ae2-a33c768f6ee1.mp4
+## Example video showing how to add new movies to the database:
+https://user-images.githubusercontent.com/62146611/125195132-f6849d00-e271-11eb-9ba6-61104d568d01.mp4
+
+
 
 
 
