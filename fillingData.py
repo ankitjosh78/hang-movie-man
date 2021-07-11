@@ -35,6 +35,7 @@ while counter > 0:
 
             # Getting the genres of the movie
             genres = movie['genres']
+            languages = movie['languages']
             movieID = int(sequence)
 
             # Checking if there already a exists a movie with the same id
@@ -49,17 +50,20 @@ while counter > 0:
                 movieSummary = str(movie.summary())
 
                 for genre in genres:
-                    sqlQuery = "insert into movies values ( ?, ?, ?,?)"
-                    try:
+                    for lang in languages:
+                        sqlQuery = "insert into movies values ( ?, ?, ?, ?, ?)"
 
-                        # Inserting values into the movies table in the database
-                        mc.execute(sqlQuery,(movieID,movieName,genre,movieSummary))
-                        db.commit()
-                        flag=1
+                        if lang!="None" and genre!="None":
+                            try:
 
-                    except sqlite3.ProgrammingError as e:
-                        pass
-                    
+                                # Inserting values into the movies table in the database
+                                mc.execute(sqlQuery,(movieID,movieName,genre,movieSummary,lang))
+                                db.commit()
+                                flag=1
+
+                            except sqlite3.ProgrammingError as e:
+                                pass
+                        
                 if flag == 1:
                     
                     # Decreasing the counter variable 

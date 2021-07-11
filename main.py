@@ -19,11 +19,20 @@ newGen = []
 for x in genres:
     newGen.append(x[0])
 
+# fetching all the distinct genres from the database
+mc.execute("select distinct language from movies order by language asc")
+
+languages = mc.fetchall()
+newLang = []
+# storing the languages in the newLang variable
+for x in languages:
+    newLang.append(x[0])
 
 """ Displaying the user a choice before starting the game """
 
 print("1. Completely random movie.")
 print("2. Movie from specific genres like (Action, Fantasy)")
+print("3. Movie from specific language like (English, Spanish)")
 
 try:
 
@@ -71,9 +80,53 @@ if userChoice  ==  2:
 
     targetGenre = genreMap[genreChoice]
 
+    print(targetGenre)
     mc.execute("select movieID from movies where genre= ? order by movieID asc",(targetGenre,))
 
     # a list of all the movieIDs from that specific genre
+    movieIDs = []
+    for x in mc.fetchall():
+        movieIDs.append(x[0])
+
+# If user wants movies from specific languages 
+
+elif userChoice  ==  3:
+
+    print("Select any language that you want:")
+    count = 1
+
+    for language in newLang:
+        print(count,":",language)
+        count += 1
+
+    try:
+
+        # storing user's language choice
+        languageChoice = int(input("Enter your choice:"))
+
+        # doing some checks
+        if languageChoice > count or languageChoice < 1:
+
+            print("Please enter a proper number from the given list and try again")
+            quit()
+
+    except ValueError as _:
+
+        print("Please enter a number from the given list and try again.")
+        quit()
+
+    # a dictionary to store languages with their respective code number
+    langMap = {}
+    count = 1
+    for lang in newLang:
+        langMap[count] = lang
+        count += 1
+
+    targetLanguage = langMap[languageChoice]
+    print(targetLanguage)
+    mc.execute("select movieID from movies where language= ? order by movieID asc",(targetLanguage,))
+
+    # a list of all the movieIDs from that specific language
     movieIDs = []
     for x in mc.fetchall():
         movieIDs.append(x[0])
