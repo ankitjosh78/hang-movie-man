@@ -12,7 +12,7 @@ Clone the repo, and run "python main.py".
 ## What is the movieman.db file?
 Movieman.db is the local sqlite database which is used for the functioning of the game. 
 
-At theis time it has around 2215 entries , but new entries can be easily added.
+At this time it has around 2360 entries , but new entries can be easily added.
 
 ## How to add more movies to the database ?
 
