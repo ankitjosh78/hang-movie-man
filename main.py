@@ -24,6 +24,7 @@ mc.execute("select distinct language from movies order by language asc")
 
 languages = mc.fetchall()
 newLang = []
+
 # storing the languages in the newLang variable
 for x in languages:
     newLang.append(x[0])

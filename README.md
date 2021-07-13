@@ -3,7 +3,6 @@
 Hangman but for movies 😉
 
 This is a fun hangman style game to guess random movie names from the local database and show some summary about the movie with a link to the same.
-
 # How to use?
 Clone the repo, and run "python main.py".
 

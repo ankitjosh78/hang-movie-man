@@ -59,7 +59,7 @@ while counter > 0:
                                 # Inserting values into the movies table in the database
                                 mc.execute(sqlQuery,(movieID,movieName,genre,movieSummary,lang))
                                 db.commit()
-                                flag=1
+                                flag = 1
 
                             except sqlite3.ProgrammingError as e:
                                 pass
@@ -67,10 +67,10 @@ while counter > 0:
                 if flag == 1:
                     
                     # Decreasing the counter variable 
-                    counter-=1 
+                    counter -= 1 
 
                     #Count variable used to show the total movies added so far
-                    count+=1
+                    count += 1
                     print(count,"new movies added to the database.")
 
         except KeyError as _:
