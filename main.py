@@ -197,7 +197,7 @@ choice =  input("Do you want to start guessing? (y/n)")
 # If choice is "no"
 if choice.lower()  == "n":
 
-    print("FUCK YOU FOR WASTING MY TIME")
+    print("Please dont waste my TIME")
 
 # If choice is not "no"
 else:
